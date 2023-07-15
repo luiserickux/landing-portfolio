@@ -1,0 +1,156 @@
+@import url(colors.css);
+
+:root {
+    /* Tamaños de tipografía para Mobile */
+    --size-t-x-main: 3.5625rem;
+    --size-t-main: 3rem;
+    --size-t-h1: 2.5rem;
+    --size-t-h2: 2.0625rem;
+    --size-t-h3: 1.75rem;
+    --size-t-h4: 1.375rem;
+    --size-t-large: 1.1875rem;
+    --size-t-primary: 1rem;
+    --size-t-secondary: 0.8125rem;
+    --size-t-tertiary: 0.6875rem;
+}
+
+/* Tipografías Mobile */
+h1,
+.typography-x-main {
+    color: var(--dark-main-high);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-x-main);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+}
+
+h1,
+.typography-main {
+    color: var(--dark-main-high);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-main);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+}
+
+h1,
+.typography-heading-1 {
+    color: var(--dark-main-low);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-h1);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+h2,
+.typography-heading-2 {
+    color: var(--dark-main-low);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-h2);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+h3,
+.typography-heading-3 {
+    color: var(--dark-main-low);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-h3);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+h4,
+.typography-heading-4 {
+    color: var(--dark-main-low);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-h4);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.typography-large {
+    color: var(--dark-primary);
+    font-family: Satoshi Variable;
+    font-size: var(--size-t-large);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.typography-primary-main {
+    color: var(--dark-primary);
+    font-family: Manrope;
+    font-size: var(--size-t-primary);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.typography-primary-bold {
+    color: var(--dark-primary);
+    font-family: Manrope;
+    font-size: var(--size-t-primary);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.typography-secondary-main {
+    color: var(--dark-secondary);
+    font-family: Manrope;
+    font-size: var(--size-t-secondary);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.typography-secondary-bold {
+    color: var(--dark-secondary);
+    font-family: Manrope;
+    font-size: var(--size-t-secondary);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.typography-tertiary-main {
+    color: var(--dark-secondary);
+    font-family: Manrope;
+    font-size: var(--size-t-tertiary);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.typography-tertiary-bold {
+    color: var(--dark-secondary);
+    font-family: Manrope;
+    font-size: var(--size-t-tertiary);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+/* Media Query para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    :root {
+        /* Tamaños de tipografía para Desktop */
+        --size-t-x-main: 4rem;
+        --size-t-main: 3.375rem;
+        --size-t-h1: 2.8125rem;
+        --size-t-h2: 2.3125rem;
+        --size-t-h3: 1.9375rem;
+        --size-t-h4: 1.625rem;
+        --size-t-large: 1.375rem;
+        --size-t-primary: 1.125rem;
+        --size-t-secondary: 0.9375rem;
+        --size-t-tertiary: 0.75rem;
+    }
+}

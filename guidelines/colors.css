@@ -1,0 +1,34 @@
+:root {
+    /* Light Mode */
+    --light-bg: hsla(246, 100%, 96%, 1);
+    --light-bg-secondary: hsla(246, 100%, 80%, 1);
+    --light-bg-tertiary: hsla(244, 80%, 72%, 1);
+    --light-complement: hsla(261, 82%, 32%, .2);
+    --light-tertiary: hsla(250, 40%, 45%, 1);
+    --light-secondary: hsla(251, 48%, 39%, 1);
+    --light-primary: hsla(251, 60%, 34%, 1);
+    --light-main-low: hsla(248, 64%, 26%, 1);
+    --light-main-high: hsla(248, 88%, 16%, 1);
+
+    /* Dark Mode */
+    --dark-bg: hsla(261, 89%, 7%, 1);
+    --dark-bg-secondary: hsla(261, 73%, 16%, 1);
+    --dark-bg-tertiary: hsla(261, 80%, 22%, 1);
+    --dark-complement: hsla(255, 96%, 91%, .12);
+    --dark-tertiary: hsla(248, 24%, 64%, 1);
+    --dark-secondary: hsla(248, 24%, 64%, 1);
+    --dark-primary: hsla(248, 48%, 84%, 1);
+    --dark-main-low: hsla(248, 100%, 94%, 1);
+    --dark-main-high: hsla(248, 100%, 97%, 1);
+
+    /* Glass Mode */
+    --glass-bg: hsla(261, 89%, 7%, .48);
+    --glass-bg-secondary: hsla(260, 96%, 54%, .16);
+    --glass-bg-tertiary: hsla(260, 96%, 54%, .28);
+    --glass-complement: hsla(255, 96%, 91%, .12);
+    --glass-tertiary: hsla(248, 24%, 64%, 1);
+    --glass-secondary: hsla(248, 24%, 64%, 1);
+    --glass-primary: hsla(248, 48%, 84%, 1);
+    --glass-main-low: hsla(248, 100%, 94%, 1);
+    --glass-main-high: hsla(248, 100%, 97%, 1);
+}
