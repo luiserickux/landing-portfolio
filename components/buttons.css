@@ -1,0 +1,34 @@
+/* Reseatear todos los enlaces */
+a {
+    font-family: Manrope;
+    font-size: var(--size-t-primary);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration: none;
+    color: var(--dark-primary);
+}
+
+a.small-cta {
+    position: relative;
+    display: inline-flex;
+    padding: 0.75rem var(--spacings-values-spacing-medium, 1.5rem);
+    border-radius: var(--border-radius-normal, 2rem);
+    background: var(--bg, #0D0222);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacings-values-spacing-xsmall, 0.5rem);
+}
+
+a.small-cta::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.24;
+    background: linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%);
+    mix-blend-mode: hard-light;
+    filter: blur(8px);
+    border-radius: var(--border-radius-normal, 2rem);
+    
+}

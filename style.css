@@ -1,4 +1,19 @@
 /* Importacion de guías de estilo */
+@import url(guidelines/spacings.css);
 @import url(guidelines/colors.css);
 @import url(guidelines/typography.css);
 
+/* Importación de componentes */
+@import url(components/buttons.css);
+
+/* Reseteo básico de valores */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos personalizados */
+body {
+    background-color: var(--purple-950);
+}

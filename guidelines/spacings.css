@@ -1,0 +1,27 @@
+:root {
+    /* Frame Values */
+    --frame-values-canvas-width: 90rem;
+    --frame-values-container-max-width: 90rem;
+    --frame-values-elements-max-width: 57.5rem;
+
+    /* Layout Values */
+    --layout-values-gap-items: 1.5rem;
+    --layout-values-gap-layout: 4rem;
+    --layout-values-margin-inline: 8rem;
+    --layout-values-margin-block: 10rem;
+
+    /* Spacings Values */
+    --spacings-values-spacing-smallest: .25rem;
+    --spacings-values-spacing-xsmall: .5rem;
+    --spacings-values-spacing-small: 1rem;
+    --spacings-values-spacing-medium: 1.5rem;
+    --spacings-values-spacing-neutral: 2rem;
+    --spacings-values-spacing-large: 2.5rem;
+    --spacings-values-spacing-xlarge: 3rem;
+    --spacings-values-spacing-biggest: 3.5rem;
+
+    /* Border Radius */
+    --border-radius-smaller: var(--spacings-values-spacing-xsmall);
+    --border-radius-small: var(--spacings-values-spacing-small);
+    --border-radius-normal: var(--spacings-values-spacing-neutral);
+}
