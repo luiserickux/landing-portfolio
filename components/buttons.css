@@ -1,34 +1,117 @@
+:root {
+    --cta-bg: linear-gradient(135deg, hsl(209, 92%, 95%) 0%, hsl(30, 100%, 80%) 50%, hsl(257, 96%, 72%) 100%);
+}
+
 /* Reseatear todos los enlaces */
 a {
-    font-family: Manrope;
-    font-size: var(--size-t-primary);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
     text-decoration: none;
     color: var(--dark-primary);
 }
 
-a.small-cta {
-    position: relative;
+/* Estilos de CTA */
+.cta,
+.pill {
     display: inline-flex;
-    padding: 0.75rem var(--spacings-values-spacing-medium, 1.5rem);
     border-radius: var(--border-radius-normal, 2rem);
-    background: var(--bg, #0D0222);
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacings-values-spacing-xsmall, 0.5rem);
+    padding: 2px;
+    background: var(--cta-bg);
 }
 
-a.small-cta::before {
+.cta .container,
+.pill .container {
+    display: inline-flex;
+    position: relative;
+    background: var(--dark-bg, #0D0222);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-normal, 2rem);
+}
+
+.cta .container::before,
+.pill .container::before {
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
-    opacity: 0.24;
-    background: linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%);
+    opacity: .4;
+    background: var(--cta-bg);
     mix-blend-mode: hard-light;
-    filter: blur(8px);
+    filter: blur(1rem);
     border-radius: var(--border-radius-normal, 2rem);
-    
+    transform: scale(1.08);
+}
+
+.cta .container p,
+.pill .container p {
+    background: var(--cta-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Estilos de tipografía */
+    font-family: var(--font-body);
+    font-size: var(--size-t-secondary);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.cta .container span:last-child {
+    width: var(--icon-size-16);
+}
+
+.cta .container span:first-child {
+    width: var(--icon-size-20);
+}
+
+/* Creación de CTA pequeño */
+.small-cta .container {
+    padding: var(--spacings-values-spacing-xsmall, 0.5rem) var(--spacings-values-spacing-small, 1rem);
+    gap: var(--spacings-values-spacing-xsmall, 0.5rem);
+}
+
+/* Creación de CTA normal */
+.normal-cta .container {
+    padding: 0.75rem var(--spacings-values-spacing-medium, 1.5rem);
+    gap: var(--spacings-values-spacing-xsmall, 0.5rem);
+}
+
+.normal-cta .container p {
+    font-family: var(--font-body);
+    font-size: var(--size-t-primary);
+}
+
+.normal-cta .container span:first-child {
+    width: var(--icon-size-24);
+}
+
+/* ---- Creación de Button Circle ---- */
+.circle-cta .container {
+    padding: 0.625rem;
+}
+
+.circle-cta .container span.container-icon {
+    --change-icon: url(../assets/icons/arrow-up-right.svg);
+    background-image: var(--change-icon);
+}
+
+/* Creación de píldora */
+
+.pill {
+    background: var(--dark-bg, #0D0222);
+    padding: 0px;
+}
+
+.pill .container {
+    gap: var(--spacings-values-spacing-xsmall, 0.5rem);
+    padding: var(--spacings-values-spacing-xsmall, 0.5rem) var(--spacings-values-spacing-small, 1rem);
+}
+
+.pill .container span:first-child {
+    --change-icon: url(../assets/icons/clock.svg);
+    background-image: var(--change-icon);
+    width: var(--icon-size-16);
+}
+
+.pill .container p {
+    font-size: var(--size-t-tertiary);
 }

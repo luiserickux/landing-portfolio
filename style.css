@@ -5,6 +5,7 @@
 
 /* Importación de componentes */
 @import url(components/buttons.css);
+@import url(components/icons.css);
 
 /* Reseteo básico de valores */
 *, *::before, *::after {

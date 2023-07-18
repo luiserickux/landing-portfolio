@@ -1,0 +1,52 @@
+/* Declaración de tamaños */
+:root {
+    --icon-size-12: 0.75rem;
+    --icon-size-16: 1rem;
+    --icon-size-20: 1.25rem;
+    --icon-size-24: 1.5rem;
+    --icon-size-28: 1.75rem;
+    --icon-size-32: 2rem;
+    --icon-size-48: 3rem;
+}
+
+/* Listado de tamaños */
+.container-icon.icon-size-12 {
+    width: var(--icon-size-12);
+}
+
+.container-icon.icon-size-16 {
+    width: var(--icon-size-16);
+}
+
+.container-icon.icon-size-20 {
+    width: var(--icon-size-20);
+}
+
+.container-icon.icon-size-24 {
+    width: var(--icon-size-24);
+}
+
+.container-icon.icon-size-28 {
+    width: var(--icon-size-28);
+}
+
+.container-icon.icon-size-32 {
+    width: var(--icon-size-32);
+}
+
+.container-icon.icon-size-48 {
+    width: var(--icon-size-48);
+}
+
+/* Configuración de contenedor de icono */
+.container-icon {
+    background-image: url(../assets/icons/message.svg);
+    background-size: cover;
+    aspect-ratio: 1/1;
+}
+
+.change-icon {
+    background-image: var(--change-icon);
+}
+
+img.container-icon::before {}
