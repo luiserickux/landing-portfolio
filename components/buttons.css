@@ -6,6 +6,7 @@
 a {
     text-decoration: none;
     color: var(--dark-primary);
+    transition: all 200ms ease;
 }
 
 /* Estilos de CTA */
@@ -33,12 +34,12 @@ a {
     content: '';
     width: 100%;
     height: 100%;
-    opacity: .4;
+    opacity: .3;
     background: var(--cta-bg);
     mix-blend-mode: hard-light;
     filter: blur(1rem);
     border-radius: var(--border-radius-normal, 2rem);
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .cta .container p,
@@ -114,4 +115,16 @@ a {
 
 .pill .container p {
     font-size: var(--size-t-tertiary);
+}
+
+/* Micro-interacciones a componente */
+
+a:hover {
+    transition: all 200ms ease;
+    transform: scale(1.05);
+}
+
+a:active {
+    transition: all 200ms ease;
+    transform: scale(.95);
 }
