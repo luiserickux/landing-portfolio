@@ -40,6 +40,7 @@ nav {
     background-color: var(--glass-bg);
     padding-inline: var(--layout-values-margin-inline, 8rem);
     backdrop-filter: blur(16px);
+    z-index: 1;
 }
 
 nav::before {
@@ -86,6 +87,41 @@ nav .main-container .items-cta {
     position: absolute;
 }
 
+.noise {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    background-image: url(assets/bg_noise.png);
+    background-repeat: repeat;
+    background-size: 12rem;
+    mix-blend-mode: overlay;
+    opacity: 0.48;
+    z-index: -1;
+}
+
+.light {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60rem !important;
+    filter: blur(56px);
+    opacity: .4 !important;
+    z-index: -2;
+}
+
+.grid {
+    z-index: -3;
+}
+
+.graph {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -4;
+}
+
 /* Estilos de Header */
 .header {
     position: relative;
@@ -101,12 +137,7 @@ nav .main-container .items-cta {
 
 .header img {
     opacity: 0.8;
-    position: absolute;
     width: 45rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
 }
 
 .header .section-container {
@@ -119,6 +150,18 @@ nav .main-container .items-cta {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.header .section-container h2 {
+    color: var(--dark-primary, #C8C3EA);
+    max-width: 38rem;
+}
+
+.header .section-container h2 span {
+    background: var(--gradients-cta-main, linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header .section-container .title-area div {
@@ -140,6 +183,6 @@ nav .main-container .items-cta {
     left: 0;
     margin: auto;
     opacity: 0.48;
-    filter: blur(8px);
+    filter: blur(6px);
     z-index: -1;
 }
