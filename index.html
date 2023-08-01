@@ -44,7 +44,7 @@
         </div>
     </span> -->
 
-    <!-- Header -->
+    <!-- Navbar -->
     <nav>
         <div class="main-container">
             <img id="logo" src="assets/logo.webp" alt="Logo de Luis Erick">
@@ -75,26 +75,182 @@
     </nav>
 
     <main>
-        <section class="header">
+
+        <!-- Header -->
+        <section class="section header">
             <div class="section-container">
                 <div class="title-area">
-                    <div class="typography-x-main"">
-                        <h1>I'm a Product</h1>
-                        <h1 class=" p-absolute">I'm a Product</h1>
+                    <div>
+                        <h1 class="decorative-text">I'm a Product</h1>
+                        <h1 class="p-absolute decorative-text">I'm a Product</h1>
                     </div>
                     <div>
-                        <h1>Designer</h1>
-                        <h1 class="p-absolute">Designer</h1>
+                        <h1 class="decorative-text">Designer</h1>
+                        <h1 class="p-absolute decorative-text">Designer</h1>
                     </div>
                 </div>
-                <h2 class="typography-heading-3">
-                    Un mexicano con <span>+3 años de experiencia</span>
+                <h3 class="typography-heading-3">
+                    Un mexicano con <span class="gradient-text">+3 años de experiencia</span>
                     en la creación de interfaces digitales.
-                </h2>
+                </h3>
             </div>
             <div class="p-absolute noise"></div>
+            <img class="grid" src="assets/bg_grid.svg">
             <img class="p-absolute light" src="assets/bg_light.svg">
             <img class="p-absolute graph" src="assets/header_graph.svg">
+        </section>
+
+        <!-- About Me -->
+        <section class="section about-me">
+            <div class="section-container">
+                <h2 class="typography-heading-1 decorative-text">Conoce un poco mas de mí</h2>
+                <div class="biography-cta">
+                    <img src="assets/photo.webp" alt="Foto de Perfil de Luis Erick">
+                    <div class="biography-main">
+                        <h3>Hola, mi nombre es<br />Luis Erick Muñoz</h3>
+                        <p class="typography-primary-main">
+                            Tengo 20 años de edad y resido en Jalisco, México.<br />Soy una persona con espíritu
+                            competitivo,
+                            me gusta ayudar a otras personas y mis pasatiempos son escuchar música electrónica y
+                            aprender algo nuevo todos los días (libros, cursos o artículos)
+                        </p>
+                        <p class="typography-secondary-bold gradient-text">¡Sigueme en mis redes sociales!</p>
+                        <div class="links-social">
+                            <a href="https://www.linkedin.com/in/luiserickux/" class="cta small-cta">
+                                <div class="container">
+                                    <span class="container-icon change-icon"
+                                        style="--change-icon: url(../assets/icons/linkedin.svg);"></span>
+                                    <p>Linkedin</p>
+                                    <span class="container-icon change-icon"
+                                        style="--change-icon: url(../assets/icons/chevron-right.svg);"></span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.instagram.com/luiserickux/" class="cta small-cta">
+                                <div class="container">
+                                    <span class="container-icon change-icon"
+                                        style="--change-icon: url(../assets/icons/instagram.svg);"></span>
+                                    <p>Instagram</p>
+                                    <span class="container-icon change-icon"
+                                        style="--change-icon: url(../assets/icons/chevron-right.svg);"></span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.behance.net/luiserickux" class="cta small-cta">
+                                <div class="container">
+                                    <span class="container-icon change-icon"
+                                        style="--change-icon: url(../assets/icons/behance.svg);"></span>
+                                    <p>Behance</p>
+                                    <span class="container-icon change-icon"
+                                        style="--change-icon: url(../assets/icons/chevron-right.svg);"></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-absolute noise"></div>
+            <img class="grid" src="assets/about-me_grid.svg">
+            <img class="p-absolute graph" src="assets/about-me_graph.svg">
+        </section>
+
+        <!-- Workflow -->
+        <section class="section workflow mode-light">
+            <div class="section-container">
+                <div class="title-area">
+                    <h2 class="typography-heading-1 decorative-text">Conoce un poco mas de mí</h2>
+                    <p class="typography-large">Utilizo las fases de la metodología Design Thinking.<br />
+                        Personalizo y uso diferentes técnicas, las que mejor se acomoden a tu proyecto.</p>
+                </div>
+                <div class="workflow-card-container">
+                    <div class="workflow-card">
+                        <div class="workflow-container">
+                            <img src="assets/icons/workflow-01.svg">
+                            <h3>Comprender al usuario</h3>
+                            <p class="typography-primary-main">
+                                Realizo varias dinámicas con el usuario para empatizar y reconocer el dolor, necesidad o
+                                problema real.
+                            </p>
+                            <span class="pill mode-dark">
+                                <div class="container">
+                                    <span class="container-icon"></span>
+                                    <p>Tiempo aprox. 6 días</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-container">
+                            <img src="assets/icons/workflow-02.svg">
+                            <h3>Definir la solución</h3>
+                            <p class="typography-primary-main">
+                                Aquí se analiza toda la información recopilada y se conserva aquella que tenga un valor
+                                real para generar la solución o el resultado final.
+                            </p>
+                            <span class="pill mode-dark">
+                                <div class="container">
+                                    <span class="container-icon"></span>
+                                    <p>Tiempo aprox. 4 días</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-container">
+                            <img src="assets/icons/workflow-03.svg">
+                            <h3>Idear la solución óptima</h3>
+                            <p class="typography-primary-main">
+                                Genero varios caminos y opciones que considere ideales, eliminando los juicios de valor.
+                            </p>
+                            <span class="pill mode-dark">
+                                <div class="container">
+                                    <span class="container-icon"></span>
+                                    <p>Tiempo aprox. 3 días</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-container">
+                            <img src="assets/icons/workflow-04.svg">
+                            <h3>Prototipar la solución</h3>
+                            <p class="typography-primary-main">
+                                Aquí sucede la magia, las ideas se hacen realidad conceptual y funcionalmente. Me
+                                encargo de construir de manera escalable la solución final gracias a la gran cantidad de
+                                contexto sobre la necesidad.
+                            </p>
+                            <span class="pill mode-dark">
+                                <div class="container">
+                                    <span class="container-icon"></span>
+                                    <p>Tiempo aprox. 1 - 2 semanas</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-container">
+                            <img src="assets/icons/workflow-05.svg">
+                            <h3>Testear y mejorar la solución</h3>
+                            <p class="typography-primary-main">
+                                Si bien, es imposible llegar al resultado perfecto, podemos acercarnos lo más posible
+                                haciendo pruebas y validaciones con los potenciales usuarios que usarán la solución.
+                            </p>
+                            <span class="pill mode-dark">
+                                <div class="container">
+                                    <span class="container-icon"></span>
+                                    <p>Tiempo variable por proyecto</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="p-absolute graph" src="assets/workflow_graph.svg">
+            <img class="p-absolute bg-gradient" src="assets/workflow_bg-gradient.svg">
         </section>
     </main>
 

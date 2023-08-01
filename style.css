@@ -40,7 +40,7 @@ nav {
     background-color: var(--glass-bg);
     padding-inline: var(--layout-values-margin-inline, 8rem);
     backdrop-filter: blur(16px);
-    z-index: 1;
+    z-index: 2;
 }
 
 nav::before {
@@ -74,6 +74,14 @@ nav .main-container .items-cta {
 }
 
 /* Estilos generales del sitio */
+.section {
+    overflow: hidden;
+    display: flex;
+    padding: var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
+    flex-direction: column;
+    align-items: center;
+}
+
 .section-container {
     display: flex;
     flex-direction: column;
@@ -92,12 +100,12 @@ nav .main-container .items-cta {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-image: url(assets/bg_noise.png);
     background-repeat: repeat;
     background-size: 12rem;
     mix-blend-mode: overlay;
-    opacity: 0.48;
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -106,13 +114,20 @@ nav .main-container .items-cta {
     left: 50%;
     transform: translateX(-50%);
     width: 60rem !important;
-    filter: blur(56px);
+    filter: blur(48px);
     opacity: .4 !important;
     z-index: -2;
 }
 
 .grid {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100% !important;
+    height: 100% !important;
     z-index: -3;
+    filter: blur(1px);
 }
 
 .graph {
@@ -122,17 +137,23 @@ nav .main-container .items-cta {
     z-index: -4;
 }
 
+.decorative-text {
+    background: var(--subtitle-dark, linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+    background: var(--gradients-cta-main, linear-gradient(135deg, #E7F3FE 0%, #FC9 40%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Estilos de Header */
 .header {
     position: relative;
-    display: flex;
-    padding: var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
-    flex-direction: column;
-    align-items: center;
-    background-image: url(assets/bg_grid.svg);
-    background-size: 90rem;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .header img {
@@ -152,16 +173,9 @@ nav .main-container .items-cta {
     width: 100%;
 }
 
-.header .section-container h2 {
+.header .section-container h3 {
     color: var(--dark-primary, #C8C3EA);
     max-width: 38rem;
-}
-
-.header .section-container h2 span {
-    background: var(--gradients-cta-main, linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .header .section-container .title-area div {
@@ -170,11 +184,7 @@ nav .main-container .items-cta {
 }
 
 .header .section-container .title-area div h1 {
-    background: var(--subtitle-dark, linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 52.20%, #9A73FC 100%));
-    background-clip: text;
     width: inherit;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 10rem;
 }
 
@@ -185,4 +195,140 @@ nav .main-container .items-cta {
     opacity: 0.48;
     filter: blur(6px);
     z-index: -1;
+}
+
+/* Estilos de Sobre Mi */
+.about-me {
+    overflow-y: hidden;
+    position: relative;
+    padding: 5rem var(--layout-values-margin-inline, 8rem) var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
+}
+
+.biography-cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacings-values-spacing-large, 2.5rem);
+    max-width: var(--frame-values-elements-max-width, 57.5rem);
+    padding: var(--spacings-values-spacing-large, 2.5rem);
+    border: 1.5px solid var(--dark-main-high);
+    border-radius: var(--border-radius-normal, 2rem);
+    background: var(--glass-bg, rgba(13, 2, 34, 0.48));
+    backdrop-filter: blur(4px);
+}
+
+.biography-cta img {
+    width: 15rem;
+    border-radius: 15rem;
+    border: 2px solid var(--dark-complement);
+}
+
+.biography-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.biography-main h3,
+.biography-main p.typography-primary-main {
+    margin-bottom: var(--spacings-values-spacing-medium, 1.5rem);
+}
+
+.biography-main p.typography-secondary-bold {
+    margin-bottom: var(--spacings-values-spacing-small, 1rem);
+}
+
+.biography-main .links-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem var(--layout-values-gap-items, 1.5rem);
+}
+
+.about-me .graph {
+    width: 56rem !important;
+}
+
+/* Estilos de Workflow */
+.workflow {
+    position: relative;
+    background: var(--bg, #EDEBFF);
+}
+
+.workflow .graph {
+    width: 64rem;
+    top: 16%;
+    left: 50%;
+    z-index: 0;
+}
+
+.workflow .bg-gradient {
+    width: 100% !important;
+    bottom: -1rem;
+    left: 0;
+    z-index: 0;
+}
+
+.workflow .section-container {
+    z-index: 1;
+}
+
+.workflow .title-area {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacings-values-spacing-small, 1rem);
+}
+
+.workflow .title-area h2 {
+    background: var(--subtitle-light, linear-gradient(180deg, #5445A1 0%, #0E054D 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.workflow-card-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 1.5rem var(--layout-values-gap-items, 1.5rem);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.workflow-card {
+    position: relative;
+    display: flex;
+    min-width: 20.5rem;
+    width: 100%;
+    max-width: 32rem;
+}
+
+.workflow-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-bg-secondary, #A59BFF);
+    border-radius: var(--border-radius-normal, 2rem);
+    opacity: .04;
+    z-index: -1;
+}
+
+.workflow-card .workflow-container {
+    display: flex;
+    width: 100%;
+    padding: var(--spacings-values-spacing-large, 2.5rem);
+    border-radius: var(--border-radius-normal, 2rem);
+    border: 1px solid rgba(62, 15, 150, 0.20);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.workflow-card .workflow-container .pill {
+    display: flex;
+    margin-top: auto;
+}
+
+.workflow-card img {
+    width: 2.5rem;
 }
