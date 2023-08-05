@@ -1,0 +1,62 @@
+.image-card {
+    display: flex;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: var(--border-radius-small, 1rem);
+    border: 1px solid var(--complement, rgba(220, 209, 254, 0.12));
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.image-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.image-card .overlay {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--spacings-values-spacing-biggest, 3.5rem) var(--spacings-values-spacing-medium, 1.5rem) var(--spacings-values-spacing-medium, 1.5rem) var(--spacings-values-spacing-medium, 1.5rem);
+    position: absolute;
+    content: '';
+    background: linear-gradient(180deg, rgba(13, 2, 34, 0.00) 0%, rgba(13, 2, 34, 0.12) 24%, rgba(13, 2, 34, 0.80) 64%, #0D0222 100%);
+    z-index: 1;
+    transition: all 300ms ease;
+}
+
+.image-card .overlay h4 {
+    color: var(--dark-main-low);
+    padding-bottom: 0.5rem;
+}
+
+.image-card .overlay>p {
+    padding-bottom: var(--spacings-values-spacing-small);
+}
+
+.badge-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem var(--spacings-values-spacing-xsmall, 0.5rem);
+    flex-wrap: wrap;
+
+}
+
+.badge {
+    display: inline-flex;
+    padding: var(--spacings-values-spacing-smallest, 0.25rem) var(--spacings-values-spacing-xsmall, 0.5rem);
+    border-radius: var(--border-radius-normal, 2rem);
+    background: var(--glass-bg-secondary, rgba(100, 25, 250, 0.16));
+    border: 1px solid var(--glass-complement, rgba(220, 209, 254, 0.12));
+    backdrop-filter: blur(2px);
+}
+
+/* Interacciones de Componente */
+.image-card:hover .overlay {
+    opacity: 0;
+    transition: all 300ms ease;
+}

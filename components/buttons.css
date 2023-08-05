@@ -120,11 +120,45 @@ a {
 /* Micro-interacciones a componente */
 
 a:hover {
-    transition: all 200ms ease;
-    transform: scale(1.05);
+    transition: all 300ms ease;
+    transform: scale(1.04);
 }
 
 a:active {
     transition: all 50ms ease;
     transform: scale(.95);
+}
+
+/* Maquetado de Especial CTA */
+.special-cta {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacings-values-spacing-small, 1rem) var(--spacings-values-spacing-small, 1rem) var(--spacings-values-spacing-small, 1rem) var(--spacings-values-spacing-medium, 1.5rem);
+    border-radius: 5rem;
+    background: linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%);
+    gap: var(--layout-values-gap-items, 1.5rem);
+    transition: all 300ms ease;
+
+}
+
+.special-cta::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%);
+    filter: blur(32px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.special-cta p {
+    color: var(--orange-900, #331B00);
+}
+
+.special-cta:hover {
+    transition: all 300ms ease;
+    transform: scale(1.02);
 }

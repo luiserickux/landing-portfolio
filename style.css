@@ -6,6 +6,7 @@
 /* Importación de componentes */
 @import url(components/buttons.css);
 @import url(components/icons.css);
+@import url(components/cards.css);
 
 /* Reseteo básico de valores */
 *,
@@ -17,6 +18,11 @@
 }
 
 /* Estilos personalizados */
+:root {
+    --subtitle-light: linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%);
+    --subtitle-dark: linear-gradient(180deg, #5445A1 0%, #0E054D 100%);
+}
+
 body {
     background-color: var(--purple-950);
 }
@@ -41,6 +47,7 @@ nav {
     padding-inline: var(--layout-values-margin-inline, 8rem);
     backdrop-filter: blur(16px);
     z-index: 2;
+    transition: all 300ms ease;
 }
 
 nav::before {
@@ -100,12 +107,11 @@ nav .main-container .items-cta {
     left: 0;
     width: 100%;
     height: 100%;
-    /* border: 1px solid red; */
     background-image: url(assets/bg_noise.png);
     background-repeat: repeat;
     background-size: 12rem;
     mix-blend-mode: overlay;
-    opacity: 0.4;
+    opacity: 0.48;
     z-index: -1;
 }
 
@@ -137,8 +143,15 @@ nav .main-container .items-cta {
     z-index: -4;
 }
 
-.decorative-text {
-    background: var(--subtitle-dark, linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%));
+.decorative-text-light {
+    background: var(--subtitle-light, linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.decorative-text-dark {
+    background: var(--subtitle-dark, linear-gradient(180deg, #5445A1 0%, #0E054D 100%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -146,6 +159,21 @@ nav .main-container .items-cta {
 
 .gradient-text {
     background: var(--gradients-cta-main, linear-gradient(135deg, #E7F3FE 0%, #FC9 40%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacings-values-spacing-small, 1rem);
+}
+
+.title-area h2 {
+    background: var(--subtitle-dark, linear-gradient(180deg, #5445A1 0%, #0E054D 100%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -204,6 +232,15 @@ nav .main-container .items-cta {
     padding: 5rem var(--layout-values-margin-inline, 8rem) var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
 }
 
+.about-me::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: var(--gradients-bgbg-2, linear-gradient(to bottom, hsla(261, 73%, 16%, 0) 0%, var(--dark-bg-secondary) 94%));
+    z-index: -5;
+}
+
 .biography-cta {
     display: flex;
     flex-direction: row;
@@ -251,6 +288,7 @@ nav .main-container .items-cta {
 .workflow {
     position: relative;
     background: var(--bg, #EDEBFF);
+    border-radius: 0 0 2rem 2rem;
 }
 
 .workflow .graph {
@@ -271,35 +309,15 @@ nav .main-container .items-cta {
     z-index: 1;
 }
 
-.workflow .title-area {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: var(--spacings-values-spacing-small, 1rem);
-}
-
-.workflow .title-area h2 {
-    background: var(--subtitle-light, linear-gradient(180deg, #5445A1 0%, #0E054D 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .workflow-card-container {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    gap: 1.5rem var(--layout-values-gap-items, 1.5rem);
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-gap: var(--layout-values-gap-items, 1.5rem);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .workflow-card {
     position: relative;
     display: flex;
-    min-width: 20.5rem;
-    width: 100%;
-    max-width: 32rem;
 }
 
 .workflow-card::before {
@@ -331,4 +349,93 @@ nav .main-container .items-cta {
 
 .workflow-card img {
     width: 2.5rem;
+}
+
+/* Estilos de Servicios */
+.services {
+    position: relative;
+}
+
+.services .graph {
+    width: 55rem;
+}
+
+.services .section-container .title-area {
+    width: 100%;
+    text-align: left;
+}
+
+.services .section-container .title-area h2 {
+    background: var(--subtitle-light, linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-area {
+    display: grid;
+    grid-gap: var(--layout-values-gap-items, 1.5rem);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.service-card {
+    display: flex;
+    overflow: hidden;
+    padding: var(--spacings-values-spacing-large, 2.5rem);
+    border-radius: var(--border-radius-normal, 2rem);
+    border: 2px solid var(--complement, rgba(220, 209, 254, 0.12));
+    background: var(--bg, rgba(13, 2, 34, 0.48));
+    flex-direction: column;
+    align-items: flex-end;
+    backdrop-filter: blur(4px);
+}
+
+.service-card:last-child {
+    align-items: flex-start;
+}
+
+.service-card h3 {
+    width: 100%;
+    padding-bottom: var(--spacings-values-spacing-small, 1rem);
+}
+
+.service-card p {
+    width: 100%;
+    padding-bottom: var(--spacings-values-spacing-large, 2.5rem);
+}
+
+.service-card img {
+    height: 20rem;
+    border-radius: var(--spacings-values-spacing-xsmall, 0.5rem);
+    box-shadow: 0px 4px 32px -8px rgba(179, 155, 253, 0.40);
+    border: 2px solid var(--dark-tertiary);
+    margin-bottom: -4rem;
+}
+
+/* Estilos de Proyectos */
+.projects {
+    position: relative;
+    padding-top: 0;
+}
+
+.projects .section-container .title-area {
+    text-align: left;
+}
+
+.projects .section-container .title-area h2 {
+    background: var(--subtitle-light, linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos de Proyectos */
+.image-card-container {
+    display: grid;
+    grid-gap: var(--layout-values-gap-items, 1.5rem);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.image-card:last-child {
+    cursor: pointer;
 }
