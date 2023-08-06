@@ -46,7 +46,7 @@ nav {
     background-color: var(--glass-bg);
     padding-inline: var(--layout-values-margin-inline, 8rem);
     backdrop-filter: blur(16px);
-    z-index: 2;
+    z-index: 10;
     transition: all 300ms ease;
 }
 
@@ -68,13 +68,13 @@ nav .main-container {
     /* border: 1px solid white; */
 }
 
-nav .main-container img {
+.logo {
     display: block;
     width: 12.5rem;
     height: auto;
 }
 
-nav .main-container .items-cta {
+.items-cta {
     display: flex;
     align-items: center;
     gap: var(--layout-values-gap-items, 1.5rem);
@@ -418,6 +418,10 @@ nav .main-container .items-cta {
     padding-top: 0;
 }
 
+.projects .graph {
+    width: 75rem;
+}
+
 .projects .section-container .title-area {
     text-align: left;
 }
@@ -438,4 +442,124 @@ nav .main-container .items-cta {
 
 .image-card:last-child {
     cursor: pointer;
+}
+
+/* Estilos de Ultimate Moment */
+.ultimate-moment {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    padding: var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
+    background: var(--light-bg, #EDEBFF);
+    flex-direction: column;
+}
+
+.ultimate-moment .section-container {
+    z-index: 1;
+}
+
+.ultimate-moment .bg-gradient {
+    width: 100% !important;
+    top: -1rem;
+    left: 0;
+    z-index: 0;
+}
+
+.ultimate-moment .grid {
+    z-index: 0;
+}
+
+.composition {
+    width: 100%;
+    padding-block: var(--spacings-values-spacing-neutral);
+}
+
+.composition-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-composition {
+    width: 45rem;
+    display: inline-flex;
+    border-radius: var(--spacings-values-spacing-small, 1rem);
+    border: 2px solid var(--purple-50, #EDE8FF);
+    box-shadow: 8px 16px 52px -8px rgba(73, 65, 98, 0.56);
+    align-items: flex-start;
+    transition: all 200ms ease-out;
+}
+
+.image-composition:last-child {
+    width: 45rem;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-42.5%);
+    rotate: -2deg;
+    z-index: 2;
+}
+
+.image-composition:nth-child(2) {
+    width: 42.5rem;
+    z-index: 1;
+}
+
+.image-composition:first-child {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-57.5%);
+    width: 40rem;
+    rotate: 2deg;
+    z-index: 0;
+}
+
+.composition-container:hover .image-composition:last-child {
+    transform: translateX(35%);
+    transition: all 200ms ease-in-out;
+}
+
+.composition-container:hover .image-composition:first-child {
+    transform: translateX(-130%);
+    transition: all 200ms ease-in-out;
+}
+
+/* Estilos de Footer */
+.footer {
+    display: flex;
+    position: relative;
+    padding: 5rem var(--layout-values-margin-inline, 8rem);
+    flex-direction: column;
+}
+
+.footer .graph {
+    width: 65rem;
+    top: 100%;
+}
+
+.footer .section-container {
+    gap: var(--spacings-values-spacing-neutral, 2rem);
+    align-items: stretch;
+}
+
+.footer .section-container div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacings-values-spacing-xsmall, 0px);
+}
+
+.footer .section-container>div:nth-child(2) {
+    border: 1px solid var(--purple-50, #EDE8FF);
+    opacity: 0.24;
+}
+
+.footer .section-container div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

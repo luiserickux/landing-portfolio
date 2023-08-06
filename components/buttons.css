@@ -31,15 +31,18 @@ a {
 .cta .container::before,
 .pill .container::before {
     position: absolute;
+    top: 0;
+    left: 0;
     content: '';
     width: 100%;
     height: 100%;
-    opacity: .3;
+    opacity: .32;
     background: var(--cta-bg);
     mix-blend-mode: hard-light;
     filter: blur(1rem);
     border-radius: var(--border-radius-normal, 2rem);
-    transform: scale(1.05);
+    transform: scale(1.1);
+    z-index: 0;
 }
 
 .cta .container p,
@@ -54,14 +57,17 @@ a {
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
+    z-index: 1;
 }
 
 .cta .container span:last-child {
     width: var(--icon-size-16);
+    z-index: 1;
 }
 
 .cta .container span:first-child {
     width: var(--icon-size-20);
+    z-index: 1;
 }
 
 /* Creación de CTA pequeño */
@@ -161,4 +167,10 @@ a:active {
 .special-cta:hover {
     transition: all 300ms ease;
     transform: scale(1.02);
+    backface-visibility: hidden;
+}
+
+.special-cta:active {
+    transition: all 50ms ease;
+    transform: scale(.95);
 }

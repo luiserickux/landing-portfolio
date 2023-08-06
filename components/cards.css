@@ -55,6 +55,10 @@
     backdrop-filter: blur(2px);
 }
 
+.badge p {
+    color: var(--dark-primary);
+}
+
 /* Interacciones de Componente */
 .image-card:hover .overlay {
     opacity: 0;
