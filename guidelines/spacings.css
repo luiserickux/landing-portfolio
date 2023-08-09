@@ -25,3 +25,14 @@
     --border-radius-small: var(--spacings-values-spacing-small);
     --border-radius-normal: var(--spacings-values-spacing-neutral);
 }
+
+@media (max-width: 680px) {
+    :root {
+        /* Frame Values */
+        --frame-values-elements-max-width: 30rem;
+
+        /* Layout Values */
+        --layout-values-gap-layout: 3rem;
+        --layout-values-margin-block: 6.5rem;
+    }
+}

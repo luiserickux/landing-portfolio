@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: var(--frame-values-container-max-width, 67.5rem);
+    max-width: var(--frame-values-container-max-width);
 }
 
 /* Estilos del Header */
@@ -44,7 +44,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: var(--glass-bg);
-    padding-inline: var(--layout-values-margin-inline, 8rem);
+    padding-inline: var(--layout-values-margin-inline);
     backdrop-filter: blur(16px);
     z-index: 10;
     transition: all 300ms ease;
@@ -84,7 +84,7 @@ nav .main-container {
 .section {
     overflow: hidden;
     display: flex;
-    padding: var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
+    padding: var(--layout-values-margin-block) var(--layout-values-margin-inline);
     flex-direction: column;
     align-items: center;
 }
@@ -94,8 +94,8 @@ nav .main-container {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: var(--frame-values-container-max-width, 67.5rem);
-    gap: var(--layout-values-gap-layout, 4rem);
+    max-width: var(--frame-values-container-max-width);
+    gap: var(--layout-values-gap-layout);
 }
 
 .p-absolute {
@@ -169,7 +169,7 @@ nav .main-container {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: var(--spacings-values-spacing-small, 1rem);
+    gap: var(--spacings-values-spacing-small);
 }
 
 .title-area h2 {
@@ -179,9 +179,18 @@ nav .main-container {
     -webkit-text-fill-color: transparent;
 }
 
+.mobile-show {
+    display: none;
+}
+
+.mobile-hide {
+    display: inherit;
+}
+
 /* Estilos de Header */
 .header {
     position: relative;
+    text-align: center;
 }
 
 .header img {
@@ -190,8 +199,7 @@ nav .main-container {
 }
 
 .header .section-container {
-    gap: var(--spacings-values-spacing-large, 2.5rem);
-    text-align: center;
+    gap: var(--spacings-values-spacing-large);
 }
 
 .header .section-container .title-area {
@@ -213,7 +221,7 @@ nav .main-container {
 
 .header .section-container .title-area div h1 {
     width: inherit;
-    font-size: 10rem;
+    font-size: var(--size-t-big-title);
 }
 
 .header .section-container .title-area div h1:last-child {
@@ -229,7 +237,7 @@ nav .main-container {
 .about-me {
     overflow-y: hidden;
     position: relative;
-    padding: 5rem var(--layout-values-margin-inline, 8rem) var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
+    padding: 5rem var(--layout-values-margin-inline) var(--layout-values-margin-block) var(--layout-values-margin-inline);
 }
 
 .about-me::before {
@@ -245,11 +253,11 @@ nav .main-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--spacings-values-spacing-large, 2.5rem);
-    max-width: var(--frame-values-elements-max-width, 57.5rem);
-    padding: var(--spacings-values-spacing-large, 2.5rem);
+    gap: var(--spacings-values-spacing-large);
+    max-width: var(--frame-values-elements-max-width);
+    padding: var(--spacings-values-spacing-large);
     border: 1.5px solid var(--dark-main-high);
-    border-radius: var(--border-radius-normal, 2rem);
+    border-radius: var(--border-radius-normal);
     background: var(--glass-bg, rgba(13, 2, 34, 0.48));
     backdrop-filter: blur(4px);
 }
@@ -267,17 +275,17 @@ nav .main-container {
 
 .biography-main h3,
 .biography-main p.typography-primary-main {
-    margin-bottom: var(--spacings-values-spacing-medium, 1.5rem);
+    margin-bottom: var(--spacings-values-spacing-medium);
 }
 
 .biography-main p.typography-secondary-bold {
-    margin-bottom: var(--spacings-values-spacing-small, 1rem);
+    margin-bottom: var(--spacings-values-spacing-small);
 }
 
 .biography-main .links-social {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem var(--layout-values-gap-items, 1.5rem);
+    gap: 1.5rem var(--layout-values-gap-items);
 }
 
 .about-me .graph {
@@ -287,7 +295,7 @@ nav .main-container {
 /* Estilos de Workflow */
 .workflow {
     position: relative;
-    background: var(--bg, #EDEBFF);
+    background: var(--light-bg, #EDEBFF);
     border-radius: 0 0 2rem 2rem;
 }
 
@@ -311,7 +319,7 @@ nav .main-container {
 
 .workflow-card-container {
     display: grid;
-    grid-gap: var(--layout-values-gap-items, 1.5rem);
+    grid-gap: var(--layout-values-gap-items);
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -326,7 +334,7 @@ nav .main-container {
     width: 100%;
     height: 100%;
     background: var(--dark-bg-secondary, #A59BFF);
-    border-radius: var(--border-radius-normal, 2rem);
+    border-radius: var(--border-radius-normal);
     opacity: .04;
     z-index: -1;
 }
@@ -334,8 +342,8 @@ nav .main-container {
 .workflow-card .workflow-container {
     display: flex;
     width: 100%;
-    padding: var(--spacings-values-spacing-large, 2.5rem);
-    border-radius: var(--border-radius-normal, 2rem);
+    padding: var(--spacings-values-spacing-large);
+    border-radius: var(--border-radius-normal);
     border: 1px solid rgba(62, 15, 150, 0.20);
     flex-direction: column;
     align-items: flex-start;
@@ -374,17 +382,17 @@ nav .main-container {
 
 .services-area {
     display: grid;
-    grid-gap: var(--layout-values-gap-items, 1.5rem);
+    grid-gap: var(--layout-values-gap-items);
     grid-template-columns: repeat(2, 1fr);
 }
 
 .service-card {
     display: flex;
     overflow: hidden;
-    padding: var(--spacings-values-spacing-large, 2.5rem);
-    border-radius: var(--border-radius-normal, 2rem);
-    border: 2px solid var(--complement, rgba(220, 209, 254, 0.12));
-    background: var(--bg, rgba(13, 2, 34, 0.48));
+    padding: var(--spacings-values-spacing-large);
+    border-radius: var(--border-radius-normal);
+    border: 2px solid var(--glass-complement, rgba(220, 209, 254, 0.12));
+    background: var(--glass-bg, rgba(13, 2, 34, 0.48));
     flex-direction: column;
     align-items: flex-end;
     backdrop-filter: blur(4px);
@@ -436,7 +444,7 @@ nav .main-container {
 /* Estilos de Proyectos */
 .image-card-container {
     display: grid;
-    grid-gap: var(--layout-values-gap-items, 1.5rem);
+    grid-gap: var(--layout-values-gap-items);
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -449,7 +457,7 @@ nav .main-container {
     display: flex;
     position: relative;
     overflow: hidden;
-    padding: var(--layout-values-margin-block, 10rem) var(--layout-values-margin-inline, 8rem);
+    padding: var(--layout-values-margin-block) var(--layout-values-margin-inline);
     background: var(--light-bg, #EDEBFF);
     flex-direction: column;
 }
@@ -484,7 +492,7 @@ nav .main-container {
 .image-composition {
     width: 45rem;
     display: inline-flex;
-    border-radius: var(--spacings-values-spacing-small, 1rem);
+    border-radius: var(--spacings-values-spacing-small);
     border: 2px solid var(--purple-50, #EDE8FF);
     box-shadow: 8px 16px 52px -8px rgba(73, 65, 98, 0.56);
     align-items: flex-start;
@@ -530,7 +538,7 @@ nav .main-container {
 .footer {
     display: flex;
     position: relative;
-    padding: 5rem var(--layout-values-margin-inline, 8rem);
+    padding: 5rem var(--layout-values-margin-inline);
     flex-direction: column;
 }
 
@@ -540,16 +548,16 @@ nav .main-container {
 }
 
 .footer .section-container {
-    gap: var(--spacings-values-spacing-neutral, 2rem);
+    gap: var(--spacings-values-spacing-neutral);
     align-items: stretch;
 }
 
-.footer .section-container div:first-child {
+.footer .section-container .logo-area {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: var(--spacings-values-spacing-xsmall, 0px);
+    padding-bottom: var(--spacings-values-spacing-xsmall);
 }
 
 .footer .section-container>div:nth-child(2) {
@@ -557,9 +565,196 @@ nav .main-container {
     opacity: 0.24;
 }
 
-.footer .section-container div:last-child {
+.footer .section-container .footer-items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.phrase {
+    color: var(--dark-primary);
+}
+
+
+/* ---- Keyframes ---- */
+
+@media (min-width: 280px) {
+    :root {
+        --layout-values-margin-inline: 1rem;
+    }
+}
+
+@media (min-width: 425px) {
+    :root {
+        --layout-values-margin-inline: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --layout-values-margin-inline: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --layout-values-margin-inline: 3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --layout-values-margin-inline: 4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --layout-values-margin-inline: 8rem;
+    }
+}
+
+/* Re-declaración de variables */
+
+@media (max-width: 880px) {
+    .image-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .composition-container {
+        scale: .75;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-card img {
+        width: calc(100% + 4 * var(--spacings-values-spacing-large));
+        height: auto;
+    }
+}
+
+@media (max-width: 748px) {
+    :root {
+        --size-t-big-title: 8rem;
+    }
+
+    .composition {
+        padding: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .title-area {
+        text-align: left;
+    }
+
+    .header {
+        text-align: left;
+    }
+
+    .mobile-show {
+        display: inherit;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .biography-cta {
+        flex-direction: column;
+    }
+
+    .workflow-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .ultimate-moment .section-container {
+        gap: 0;
+    }
+
+    .composition-container {
+        scale: .6;
+    }
+}
+
+@media (max-width: 620px) {
+    .image-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .special-cta {
+        max-width: var(--frame-values-elements-max-width);
+        width: 100%;
+        flex-direction: column;
+        border-radius: 1.5rem;
+        padding: var(--spacings-values-spacing-small);
+    }
+
+    .special-cta .cta {
+        display: flex;
+        width: 100%;
+    }
+
+    .special-cta .cta .container {
+        width: inherit;
+    }
+}
+
+@media (max-width: 592px) {
+    :root {
+        --size-t-big-title: 6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .biography-main .links-social {
+        flex-direction: column;
+    }
+
+    .biography-main .links-social .cta .container {
+        width: 100%;
+    }
+
+    .footer .section-container div.logo-area {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--layout-values-gap-items);
+    }
+
+    .footer .section-container div.logo-area .cta {
+        width: 100%;
+    }
+
+    .footer .section-container div.logo-area,
+    .footer .section-container div.footer-items {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--layout-values-gap-items);
+    }
+}
+
+@media (max-width: 464px) {
+    :root {
+        --size-t-big-title: 5.5rem;
+    }
+
+    nav .items-cta a:nth-child(3) {
+        display: none;
+    }
+
+    .composition-container {
+        scale: .40;
+        margin-block: -4rem;
+    }
+}
+
+@media (max-width: 392px) {
+    nav .items-cta a:nth-child(2) {
+        display: none;
+    }
 }

@@ -72,12 +72,14 @@ a {
 
 /* Creación de CTA pequeño */
 .small-cta .container {
+    width: inherit;
     padding: var(--spacings-values-spacing-xsmall, 0.5rem) var(--spacings-values-spacing-small, 1rem);
     gap: var(--spacings-values-spacing-xsmall, 0.5rem);
 }
 
 /* Creación de CTA normal */
 .normal-cta .container {
+    width: inherit;
     padding: 0.75rem var(--spacings-values-spacing-medium, 1.5rem);
     gap: var(--spacings-values-spacing-xsmall, 0.5rem);
 }
@@ -152,6 +154,8 @@ a:active {
 .special-cta::before {
     position: absolute;
     content: '';
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, #E7F3FE 0%, #FC9 50%, #9A73FC 100%);

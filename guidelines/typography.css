@@ -50,6 +50,7 @@
     --font-body: Manrope, Arial;
 
     /* Tamaños de tipografía para Mobile */
+    --size-t-big-title: 10rem;
     --size-t-x-main: 3.5625rem;
     --size-t-main: 3rem;
     --size-t-h1: 2.5rem;
