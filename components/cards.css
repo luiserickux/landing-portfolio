@@ -29,7 +29,7 @@
     transition: all 300ms ease;
 }
 
-.image-card .overlay h4 {
+.image-card .overlay h3 {
     color: var(--dark-main-low);
     padding-bottom: 0.5rem;
 }
