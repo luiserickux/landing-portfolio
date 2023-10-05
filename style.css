@@ -207,6 +207,7 @@ nav .main-container {
     position: relative;
     width: inherit;
     font-size: var(--size-t-big-title);
+    line-height: 120%;
 }
 
 .header .section-container h1::before {
