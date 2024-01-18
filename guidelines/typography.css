@@ -50,8 +50,8 @@
     --font-body: Manrope, Arial;
 
     /* Declaración de espaciados de letra */
-    --letter-spacing-big: -1.9px;
-    --letter-spacing-normal: -1.1px;
+    --letter-spacing-big: -1.85px;
+    --letter-spacing-normal: -1.05px;
 
     /* Tamaños de tipografía para Mobile */
     --size-t-big-title: 10rem;
