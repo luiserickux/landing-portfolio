@@ -16,7 +16,7 @@
     --dark-bg-tertiary: hsla(261, 80%, 22%, 1);
     --dark-complement: hsla(255, 96%, 91%, .12);
     --dark-tertiary: hsla(248, 24%, 64%, 1);
-    --dark-secondary: hsla(248, 24%, 64%, 1);
+    --dark-secondary: hsla(246, 28%, 74%, 1);
     --dark-primary: hsla(248, 48%, 84%, 1);
     --dark-main-low: hsla(248, 100%, 94%, 1);
     --dark-main-high: hsla(248, 100%, 97%, 1);
@@ -27,7 +27,7 @@
     --glass-bg-tertiary: hsla(260, 96%, 54%, .28);
     --glass-complement: hsla(255, 96%, 91%, .12);
     --glass-tertiary: hsla(248, 24%, 64%, 1);
-    --glass-secondary: hsla(248, 24%, 64%, 1);
+    --glass-secondary: hsla(246, 28%, 74%, 1);
     --glass-primary: hsla(248, 48%, 84%, 1);
     --glass-main-low: hsla(248, 100%, 94%, 1);
     --glass-main-high: hsla(248, 100%, 97%, 1);
