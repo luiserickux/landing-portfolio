@@ -924,7 +924,6 @@ nav .main-container {
 }
 
 .group-pills .custom-pill {
-    min-width: 5rem;
     background: var(--glass-bg-secondary);
     border: 1px solid var(--glass-bg-tertiary);
     backdrop-filter: blur(2px);
@@ -975,6 +974,154 @@ nav .main-container {
     cursor: pointer;
     align-self: start;
 }
+
+/* Grid #3 */
+#experience {
+    max-height: 80rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#experience .group-grid {
+    gap: 1.5rem;
+}
+
+.button-expander-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 10rem;
+    background: linear-gradient(180deg, rgba(13, 2, 34, 0.00) 0%, rgba(13, 2, 34, 0.64) 50%, #0D0222 100%);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: var(--padding-grid-cv);
+}
+
+.button-expander-js {
+    background: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-complement);
+    cursor: pointer;
+}
+
+.button-expander-js span {
+    width: 1rem;
+    height: 1rem;
+    background-image: var(--change-icon);
+}
+
+.experience-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.experience-group .photo-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.experience-group .photo-area img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+    border: 1px solid var(--glass-complement);
+}
+
+.experience-group .photo-area .photo-content {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.experience-group .photo-area .photo-content>p:first-child {
+    color: var(--dark-main-high);
+}
+
+.experience-group .experience-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.experience-group .experience-area .timeline {
+    min-width: 3.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+}
+
+.experience-group .experience-area .timeline .line {
+    flex-grow: 1;
+    width: .25rem;
+    background: var(--glass-complement);
+}
+
+.experience-group .experience-area .timeline .line:first-child {
+    flex-grow: 0;
+    height: 0.875rem;
+}
+
+.experience-group .experience-area .timeline .circle {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: .25rem;
+    background: var(--glass-complement);
+}
+
+.experience-group .experience-area.first .timeline .line:first-child {
+    background: transparent;
+}
+
+.experience-group .experience-area.end .timeline .line:last-child {
+    background: var(--glass-complement);
+}
+
+.experience-group .experience-area .experience-area-main {
+    display: flex;
+    flex-direction: column;
+    padding-block: 1rem;
+}
+
+.experience-group .experience-area .experience-area-main>:first-child {
+    margin-bottom: .25rem;
+    color: var(--dark-main-low);
+}
+
+.experience-group .experience-area .experience-area-main>:nth-child(2) {
+    color: var(--dark-tertiary);
+}
+
+.experience-group .experience-area .experience-area-main>:nth-child(2),
+.experience-group .experience-area .experience-area-main>:nth-child(3) {
+    margin-bottom: 1rem;
+}
+
+.experience-group .experience-area .experience-area-main .group-pills {
+    gap: .5rem;
+}
+
+.experience-group .experience-area .experience-area-main .group-pills .custom-pill {
+    padding: 0.25rem 0.75rem;
+}
+
+/* Grid #4 */
+#projects {
+    /* max-height: 80rem; */
+    position: relative;
+    overflow: hidden;
+}
+
+
 
 /* Hacer media querie de 884px */
 
@@ -1046,5 +1193,9 @@ nav .main-container {
 
     .item-information:last-child {
         padding-block-end: 0;
+    }
+
+    .experience-group .experience-area .timeline {
+        display: none;
     }
 }
