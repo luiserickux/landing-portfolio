@@ -980,6 +980,7 @@ nav .main-container {
     max-height: 80rem;
     position: relative;
     overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
 #experience .group-grid {
