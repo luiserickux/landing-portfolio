@@ -21,6 +21,7 @@
 :root {
     --subtitle-light: linear-gradient(180deg, #C8C3EA 0%, #F2F0FF 48%, #9A73FC 100%);
     --subtitle-dark: linear-gradient(180deg, #5445A1 0%, #0E054D 100%);
+    --padding-grid-cv: 2.5rem;
 }
 
 body {
@@ -776,12 +777,12 @@ nav .main-container {
 .cv-full-container {
     display: flex;
     flex-direction: column;
-    padding-inline: 5rem;
+    padding-inline: var(--layout-values-margin-inline);
     align-items: center;
 }
 
 .cv-header {
-    padding-block: 5rem;
+    padding-block: 2.5rem;
 }
 
 .cv-header-img {
@@ -801,7 +802,7 @@ nav .main-container {
 
 .cv-main-content {
     width: 100%;
-    max-width: var(--frame-values-container-max-width);
+    max-width: var(--frame-values-elements-max-width);
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -838,8 +839,13 @@ nav .main-container {
     margin-top: 4rem;
 }
 
+.cv-info>h1 {
+    width: 100%;
+}
+
 .cv-info>p {
     margin-bottom: .5rem;
+    text-wrap: pretty;
 }
 
 .custom-pill {
@@ -850,6 +856,7 @@ nav .main-container {
     padding: .5rem 1rem;
     background: var(--subtitle-dark);
     border-radius: 1.5rem;
+    justify-content: center;
 }
 
 .custom-pill img {
@@ -858,4 +865,186 @@ nav .main-container {
 
 .custom-pill p {
     color: inherit;
+    text-align: center;
+}
+
+/* Grids information */
+.grids-information {
+    padding-block: 2.5rem;
+}
+
+.grids-information .section-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+
+.grid-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: var(--padding-grid-cv);
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-complement);
+    border-radius: var(--border-radius-normal);
+}
+
+.full-grid {
+    grid-column: span 12;
+}
+
+.grid-area:first-child {
+    /* min-width: 27.25rem; */
+    grid-column: span 7;
+}
+
+.grid-area:nth-child(2) {
+    /* min-width: 21.5rem; */
+    grid-column: span 5;
+}
+
+.group-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.group-grid p {
+    text-wrap: pretty;
+}
+
+/* Grid #1 */
+.group-pills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.group-pills .custom-pill {
+    min-width: 5rem;
+    background: var(--glass-bg-secondary);
+    border: 1px solid var(--glass-bg-tertiary);
+    backdrop-filter: blur(2px);
+    color: var(--dark-primary);
+}
+
+/* Grid #2 */
+.information-items-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+.item-information .main-item-information {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.item-information .main-item-information>p:first-child {
+    color: var(--dark-primary);
+    margin-bottom: .25rem;
+}
+
+.item-information .main-item-information>p:nth-child(2) {
+    color: var(--dark-secondary);
+}
+
+
+.button-mini {
+    display: flex;
+    padding: 0.375rem 0.75rem;
+    border-radius: 2rem;
+    border: 1px solid var(--glass-complement);
+    background: var(--glass-bg);
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--dark-tertiary);
+    margin-top: .5rem;
+    cursor: pointer;
+    align-self: start;
+}
+
+/* Hacer media querie de 884px */
+
+@media (max-width: 884px) {
+
+    .grid-area:first-child {
+        grid-column: span 12;
+    }
+
+    .grid-area:nth-child(2) {
+        grid-column: span 12;
+    }
+
+    .information-items-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .item-information {
+        align-items: start;
+        padding: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .cv-main-content {
+        max-width: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 592px) {
+    :root {
+        /* Re-declarar variables de los Paddings Grids */
+        --padding-grid-cv: 1.5rem;
+    }
+
+    .cv-photo {
+        width: 10rem;
+    }
+
+    .cv-flag {
+        width: 2.75rem;
+    }
+
+    .cv-main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .cv-info {
+        margin-top: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .information-items-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .item-information {
+        align-items: center;
+        padding-block: .5rem;
+    }
+
+    .item-information:last-child {
+        padding-block-end: 0;
+    }
 }
