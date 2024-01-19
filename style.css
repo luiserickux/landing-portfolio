@@ -1117,11 +1117,63 @@ nav .main-container {
 
 /* Grid #4 */
 #projects {
-    /* max-height: 80rem; */
+    max-height: 80rem;
     position: relative;
     overflow: hidden;
 }
 
+#projects .group-grid {
+    gap: 1.5rem;
+}
+
+#projects .group-grid .project-card:last-of-type {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: start;
+    border-bottom: 1px solid var(--glass-complement);
+    padding-bottom: 2rem;
+    margin-bottom: .5rem;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 22.5rem;
+    min-width: 15rem;
+    border: 1px solid var(--glass-complement);
+    border-radius: 1rem;
+}
+
+.project-card .project-card-content {
+    width: 100%;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+}
+
+.project-card .project-card-content h4 {
+    text-wrap: pretty;
+}
+
+.project-card .project-card-content>p {
+    margin-bottom: 1rem;
+    text-wrap: pretty;
+
+    /* Experiment: Limit to 4 lines */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
 
 
 /* Hacer media querie de 884px */
@@ -1148,10 +1200,46 @@ nav .main-container {
     }
 }
 
+@media (max-width: 738px) {
+    #projects .group-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #projects .group-grid h3 {
+        grid-column: span 2;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin: 0;
+    }
+
+    .project-card img {
+        min-width: auto;
+        max-width: none;
+    }
+
+    .project-card .project-card-content {
+        min-width: auto;
+        max-width: none;
+    }
+
+    .project-card .project-card-content a {
+        align-self: stretch;
+    }
+
+    .project-card .project-card-content a div {
+        width: 100%;
+    }
+}
+
 @media (max-width: 680px) {
     .cv-main-content {
         max-width: none;
-        text-align: center;
     }
 }
 
@@ -1159,6 +1247,22 @@ nav .main-container {
     :root {
         /* Re-declarar variables de los Paddings Grids */
         --padding-grid-cv: 1.5rem;
+    }
+
+    .cv-main-content {
+        text-align: center;
+    }
+
+    .cv-header {
+        padding-top: 0;
+    }
+
+    .cv-header-img {
+        height: auto;
+    }
+
+    .cv-header-img img {
+        width: 67.5rem;
     }
 
     .cv-photo {
@@ -1178,6 +1282,10 @@ nav .main-container {
     .cv-info {
         margin-top: 0;
         align-items: center;
+    }
+
+    .project-card {
+        grid-column: span 2;
     }
 }
 
