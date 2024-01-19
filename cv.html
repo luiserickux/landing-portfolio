@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+    <!-- Implementación de Clarity Code -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "kodnht1s92");
+    </script>
+
     <!-- Meta-etiquetas OG -->
     <meta property="og:title" content="Luis Erick Muñoz | UI & Product Designer" />
     <meta property="og:description" content="Conoce mi trayecto y experiencia profesional" />
@@ -22,6 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="minified/style-cv_min.css">
     <link rel="icon" type="image/png" sizes="80x80" href="/assets/favicon.png">
     <title>Luis Erick Muñoz | Mi experiencia profesional</title>
 </head>
@@ -583,5 +593,28 @@
 </body>
 
 <script src="script.js"></script>
+<script>
+    // Primer botón de expansión de contenido
+    document.getElementById('button-expander-js-first').addEventListener('click', function () {
+        // Selecciona el contenedor de la experiencia y cambia su max-height a none para expandirlo
+        var experienciaContainer1 = document.getElementById('experience');
+        experienciaContainer1.style.maxHeight = 'none';
+
+        // Selecciona y oculta el contenedor del botón
+        var botonContenedor = document.getElementById('button-expander-container-first');
+        botonContenedor.style.display = 'none';
+    });
+
+    // Segundo botón de expansión de contenido
+    document.getElementById('button-expander-js-second').addEventListener('click', function () {
+        // Selecciona el contenedor de la experiencia y cambia su max-height a none para expandirlo
+        var experienciaContainer2 = document.getElementById('projects');
+        experienciaContainer2.style.maxHeight = 'none';
+
+        // Selecciona y oculta el contenedor del botón
+        var botonContenedor = document.getElementById('button-expander-container-second');
+        botonContenedor.style.display = 'none';
+    });
+</script>
 
 </html>

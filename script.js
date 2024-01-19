@@ -30,30 +30,3 @@ const mainContent = document.querySelector('main');
 
 // Aplica el margen superior al contenido principal
 mainContent.style.marginTop = navbarHeight + 'px';
-
-
-
-
-// CV SCRIPTS
-
-// Primer botón de expansión de contenido
-document.getElementById('button-expander-js-first').addEventListener('click', function () {
-    // Selecciona el contenedor de la experiencia y cambia su max-height a none para expandirlo
-    var experienciaContainer = document.getElementById('experience');
-    experienciaContainer.style.maxHeight = 'none';
-
-    // Selecciona y oculta el contenedor del botón
-    var botonContenedor = document.getElementById('button-expander-container-first');
-    botonContenedor.style.display = 'none';
-});
-
-// Segundo botón de expansión de contenido
-document.getElementById('button-expander-js-second').addEventListener('click', function () {
-    // Selecciona el contenedor de la experiencia y cambia su max-height a none para expandirlo
-    var experienciaContainer = document.getElementById('projects');
-    experienciaContainer.style.maxHeight = 'none';
-
-    // Selecciona y oculta el contenedor del botón
-    var botonContenedor = document.getElementById('button-expander-container-second');
-    botonContenedor.style.display = 'none';
-});
