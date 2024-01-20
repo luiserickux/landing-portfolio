@@ -183,8 +183,9 @@
                                 </div>
                                 <div class="main-item-information">
                                     <p class="typography-secondary-bold">Correo electrónico</p>
-                                    <p class="typography-secondary-main">luiserickux [arroba] gmail [.] com</p>
-                                    <a class="button-mini">
+                                    <p class="typography-secondary-main" id="email">luiserickux [arroba] gmail [.] com
+                                    </p>
+                                    <a class="button-mini button-copy-email">
                                         <p class="typography-tertiary-bold">Copiar</p>
                                         <img src="assets/icons/copy.svg" alt="">
                                     </a>
@@ -426,14 +427,15 @@
                     <div class="group-grid">
                         <h3 class="decorative-text-light">Mis mejores proyectos</h3>
                         <div class="project-card">
-                            <img src="assets/thumbnails/retorna.webp" alt="Proyecto para Retorna App">
+                            <img src="assets/thumbnails/retorna.webp" alt="Diseño de Web App para Retorna">
                             <div class="project-card-content">
                                 <h4>Retorna: Envía remesas de manera fácil, rápida y segura</h4>
                                 <p class="typography-primary-main">La misión de esta empresa es proponer una solución en
                                     servicios financieros, con la meta de posicionarse como la multinacional líder en
                                     ofrecer una gama de productos que garantizan estabilidad financiera de las personas
                                     migrantes.</p>
-                                <a href="#" class="cta small-cta">
+                                <a href="https://www.behance.net/gallery/189472765/Web-App-para-Retorna-(Caso-de-estudio-2023)"
+                                    class="cta small-cta">
                                     <div class="container">
                                         <span class="container-icon change-icon"
                                             style="--change-icon: url(../assets/icons/arrow-up-right.svg);"></span>
@@ -445,7 +447,8 @@
                             </div>
                         </div>
                         <div class="project-card">
-                            <img src="assets/thumbnails/codesaursxwebp.webp" alt="Proyecto para Retorna App">
+                            <img src="assets/thumbnails/codesaursxwebp.webp"
+                                alt="Diseño de Landing Page para CodesaursX">
                             <div class="project-card-content">
                                 <h4>CodesaursX: Contrata a la mejor agencia de software de México</h4>
                                 <p class="typography-primary-main">En este proyecto me contactaron para diseñar una
@@ -465,7 +468,7 @@
                             </div>
                         </div>
                         <div class="project-card">
-                            <img src="assets/thumbnails/plaeto.webp" alt="Proyecto para Retorna App">
+                            <img src="assets/thumbnails/plaeto.webp" alt="Diseño de Web App para Plaeto">
                             <div class="project-card-content">
                                 <h4>Plaeto Bussiness: Promueve y publicita tus publicaciones de Plaeto</h4>
                                 <p class="typography-primary-main">En este proyecto diseñé la experiencia y la interfaz
@@ -485,7 +488,8 @@
                             </div>
                         </div>
                         <div class="project-card">
-                            <img src="assets/thumbnails/landscapes.webp" alt="Proyecto para Retorna App">
+                            <img src="assets/thumbnails/landscapes.webp"
+                                alt="Diseño de Landing Page para LandScapes AI">
                             <div class="project-card-content">
                                 <h4>LandScapes AI: Descubre lugares turísticos con ayuda de la IA</h4>
                                 <p class="typography-primary-main">En este proyecto diseñé una landing page, con el
@@ -504,7 +508,7 @@
                             </div>
                         </div>
                         <div class="project-card">
-                            <img src="assets/thumbnails/just.webp" alt="Proyecto para Retorna App">
+                            <img src="assets/thumbnails/just.webp" alt="Diseño de Landing Page para Just">
                             <div class="project-card-content">
                                 <h4>Just: Consulta la biblia en cualquier momento</h4>
                                 <p class="typography-primary-main">Diseñé la experiencia para que los usuarios de
@@ -615,6 +619,39 @@
         var botonContenedor = document.getElementById('button-expander-container-second');
         botonContenedor.style.display = 'none';
     });
+
+    document.querySelector('.button-copy-email').addEventListener('click', function (event) {
+        event.preventDefault(); // Previene la navegación del enlace
+
+        // Obtén el texto del correo electrónico y reemplaza los caracteres no deseados
+        var emailAddress = document.getElementById('email').textContent
+            .replace(' [arroba] ', '@')
+            .replace(' [.] ', '.');
+
+        // Crea un elemento de entrada temporal y copia el texto del correo electrónico a este elemento
+        var tempInput = document.createElement('input');
+        tempInput.type = 'text'; // Especifica que es un input de texto
+        tempInput.value = emailAddress;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+        // Intenta copiar el texto seleccionado al portapapeles
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'Correo copiado' : 'Error al copiar';
+            // Encuentra el párrafo dentro del enlace y cambia su texto
+            this.querySelector('p').textContent = msg;
+            setTimeout(() => this.querySelector('p').textContent = 'Copiar', 3000); // 3 segundos
+        } catch (err) {
+            console.log('Error al copiar', err);
+        }
+
+        // Elimina el elemento de entrada temporal
+        document.body.removeChild(tempInput);
+    });
+
+
 </script>
 
 </html>
