@@ -28,6 +28,10 @@ body {
     background-color: var(--purple-950);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
