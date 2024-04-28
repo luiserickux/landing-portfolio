@@ -217,12 +217,14 @@
 #experience {
     max-height: 80rem;
     position: relative;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
+    padding-bottom: 0;
 }
 
 #experience .group-grid {
     gap: 1.5rem;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: var(--padding-grid-cv);
 }
 
 .button-expander-container {
@@ -236,6 +238,7 @@
     align-items: end;
     justify-content: center;
     padding: var(--padding-grid-cv);
+    border-radius: var(--border-radius-normal);
 }
 
 .button-expander-js {
@@ -357,11 +360,14 @@
 #projects {
     max-height: 80rem;
     position: relative;
-    overflow: hidden;
+    padding-bottom: 0;
 }
 
 #projects .group-grid {
     gap: 1.5rem;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: var(--padding-grid-cv);
 }
 
 #projects .group-grid .project-card:last-of-type {
